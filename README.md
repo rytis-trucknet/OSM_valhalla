@@ -8,11 +8,11 @@ auto, truck, bicycle, and pedestrian costing. Queryable by any local script.
 
 | Action | Command | Effect |
 |--------|---------|--------|
-| **Serve** (default) | `docker compose up -d` | Serves cached tiles. No download, no rebuild. Instant. |
+| **Serve** (default) | `docker compose up -d` | Serves cached tiles **(after the initial build)**. No download, no rebuild. Instant. |
 | **Build** (once) | `scripts/build.sh` | Downloads the USA PBF and builds tiles. Hours; ~100+ GB disk. |
 | **Rebuild** (on demand) | `scripts/rebuild.sh` | Clears cache, fetches the **newest** map, rebuilds. |
 
-Nothing downloads or rebuilds automatically — you are always the trigger.
+After the initial build, nothing downloads or rebuilds automatically — you are always the trigger. **Run `scripts/build.sh` before your first `docker compose up`**: an `up` with no tiles present will auto-download and build (hours).
 
 ## Setup
 

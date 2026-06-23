@@ -26,8 +26,8 @@ rm -rf \
   custom_files/valhalla_tiles \
   custom_files/valhalla_tiles.tar \
   custom_files/*.tar \
-  custom_files/timezones.sqlite \
-  custom_files/admins.sqlite \
+  custom_files/admin_data \
+  custom_files/timezone_data \
   custom_files/elevation_data
 
 echo ">> Rebuilding from newest map..."

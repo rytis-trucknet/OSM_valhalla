@@ -47,6 +47,9 @@ def main():
     start = (41.8781, -87.6298)
     end = (39.7684, -86.1581)
     result = route_truck(start, end)
+    if "trip" not in result:
+        print(f"Valhalla returned no trip: {result}", file=sys.stderr)
+        sys.exit(1)
     summary = result["trip"]["summary"]
     print(f"Distance: {summary['length']:.1f} mi, "
           f"time: {summary['time'] / 3600:.2f} h")
